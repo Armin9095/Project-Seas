@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GoodDefinition" load_steps=2 format=3 uid="uid://6efmirac2w0o"]
+
+[ext_resource type="Script" uid="uid://ccpsynyh6hl1b" path="res://Scripts/Classes/GoodDefinition.gd" id="1_mwq1j"]
+
+[resource]
+script = ExtResource("1_mwq1j")
+name = "Iron"
+base_price = 5
+weight = 5.0
+metadata/_custom_type_script = "uid://ccpsynyh6hl1b"

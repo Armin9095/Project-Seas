@@ -1,0 +1,117 @@
+[gd_scene load_steps=5 format=3 uid="uid://b65hnl6jwonls"]
+
+[ext_resource type="Script" uid="uid://dlk17d824uc5d" path="res://Scenes/Menus/setup_game.gd" id="1_56fsf"]
+[ext_resource type="AudioStream" uid="uid://c2lvf3agm3pe2" path="res://Assets/Audio/Rise of the Hansa_Menu.mp3" id="2_i3cmm"]
+[ext_resource type="Texture2D" uid="uid://bv1g16x4x5lsj" path="res://Icons/dice.png" id="3_cqkxi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u36fo"]
+bg_color = Color(0.36078432, 0.22745098, 0.12941177, 1)
+border_width_left = 2
+border_width_top = 3
+border_width_right = 2
+border_width_bottom = 3
+border_color = Color(0.8, 0.6392157, 0.28235295, 1)
+
+[node name="SetupGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_56fsf")
+
+[node name="Background" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.22745098, 0.32156864, 1)
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_i3cmm")
+volume_db = -6.0
+autoplay = true
+
+[node name="WindowPanel" type="PanelContainer" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(600, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -289.0
+offset_top = -261.0
+offset_right = 311.0
+offset_bottom = 239.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_u36fo")
+
+[node name="MarginContainer" type="MarginContainer" parent="WindowPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="MainLayout" type="VBoxContainer" parent="WindowPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="WindowPanel/MarginContainer/MainLayout"]
+layout_mode = 2
+text = "Setup Campaign"
+horizontal_alignment = 1
+
+[node name="ContentArea" type="VBoxContainer" parent="WindowPanel/MarginContainer/MainLayout"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+
+[node name="MerchantName" type="Label" parent="WindowPanel/MarginContainer/MainLayout/ContentArea"]
+layout_mode = 2
+
+[node name="NameRow" type="HBoxContainer" parent="WindowPanel/MarginContainer/MainLayout/ContentArea"]
+layout_mode = 2
+
+[node name="NameInput" type="LineEdit" parent="WindowPanel/MarginContainer/MainLayout/ContentArea/NameRow"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+placeholder_text = "Your name"
+
+[node name="RandomBtn" type="TextureButton" parent="WindowPanel/MarginContainer/MainLayout/ContentArea/NameRow"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture_normal = ExtResource("3_cqkxi")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Starting City" type="Label" parent="WindowPanel/MarginContainer/MainLayout/ContentArea"]
+layout_mode = 2
+
+[node name="CitySelector" type="OptionButton" parent="WindowPanel/MarginContainer/MainLayout/ContentArea"]
+layout_mode = 2
+item_count = 1
+popup/item_0/id = 0
+
+[node name="SetupButtonsBar" type="HBoxContainer" parent="WindowPanel/MarginContainer/MainLayout"]
+layout_mode = 2
+
+[node name="BackBtn" type="Button" parent="WindowPanel/MarginContainer/MainLayout/SetupButtonsBar"]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+text = "Back"
+
+[node name="Spacer" type="Control" parent="WindowPanel/MarginContainer/MainLayout/SetupButtonsBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StartBtn" type="Button" parent="WindowPanel/MarginContainer/MainLayout/SetupButtonsBar"]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+text = "Start"

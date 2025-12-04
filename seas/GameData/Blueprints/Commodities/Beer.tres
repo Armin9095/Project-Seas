@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="GoodDefinition" load_steps=2 format=3 uid="uid://cnjqlidju3ae3"]
+
+[ext_resource type="Script" uid="uid://ccpsynyh6hl1b" path="res://Scripts/Classes/GoodDefinition.gd" id="1_sq56m"]
+
+[resource]
+script = ExtResource("1_sq56m")
+name = "Grain"
+base_price = 5
+metadata/_custom_type_script = "uid://ccpsynyh6hl1b"
