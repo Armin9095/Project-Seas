@@ -48,12 +48,13 @@ func _on_back_btn_pressed():
 
 func _on_start_btn_pressed():
 	if name_input.text == "":
+		print("Insert a name")
 		return
 	var player_name = name_input.text            #es: Georg Stromberg 
 	var city_id = get_city_id_from_selector()
 	GameManager.setup_new_game(player_name, city_id)
-
-# Carica la scena di gioco principale (DA FARE)
+	# Carica la schermata della città selezionata (DA FARE)
+	get_tree().change_scene_to_file("res://Scenes/World/CityViews/city_test_screen.tscn")
 
 #Converte il numero della selezione città in ID testuale della città
 func get_city_id_from_selector() -> String:

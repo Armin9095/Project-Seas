@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_sq56m")
-name = "Grain"
+name = "Beer"
 base_price = 5
 metadata/_custom_type_script = "uid://ccpsynyh6hl1b"

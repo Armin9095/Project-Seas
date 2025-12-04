@@ -17,6 +17,6 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 [autoload]
 
 GameManager="*res://Core/Singleton/GameManager.gd"
-MusicManager="*res://Core/Singleton/MusicManager.tscn"
 GameConstant="*res://Core/Singleton/GameConstants.gd"
 World_Economy="*res://Scripts/Systems/Economy/WorldEconomy.gd"
+MusicManager="*res://Core/Singleton/MusicManager.tscn"

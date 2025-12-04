@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_xav5e")
-name = "Beer"
+name = "Iron"
 base_price = 5
 weight = 5.0
 metadata/_custom_type_script = "uid://ccpsynyh6hl1b"

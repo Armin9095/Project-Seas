@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=3 uid="uid://774ogbxu5my1"]
+
+[ext_resource type="Script" uid="uid://cm1yhluk2t4mw" path="res://Scripts/UI/city_test_screen.gd" id="1_q7l4c"]
+
+[node name="CityScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q7l4c")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.22745098, 0.32156864, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="CityNameLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "City Name"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="InventoryLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Inventory"
+
+[node name="Inventory List" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Loading..."
+autowrap_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="prices" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "PRICES"
+
+[node name="PricesLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Loading..."
+autowrap_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2

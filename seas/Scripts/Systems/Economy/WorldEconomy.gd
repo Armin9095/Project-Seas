@@ -4,7 +4,7 @@ class_name WorldEconomy
 # Array che contiene TUTTE le città 
 var all_cities: Array = []
 
-# Funzione  che chiama automaticamente all'avvio
+# Funzione che chiama automaticamente all'avvio
 func _ready():
 	create_starting_cities()
 
